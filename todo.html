@@ -9,34 +9,45 @@
   </head>
   <body>
     <div class="container">
-      <div class="row">
+        <h1>To Do</h1>
+        <div class="row">
+            <div class="col-md-6">
 
-        <div class="col-md-6">
-          <h2>My To-Do List</h2>
-          <form id="new_list_item">
-            <div class="form-group">
-              <label for="new-task">Create Task</label>
-              <input type="text" class="form-control" id="new-task">
+                <h2>Lists</h2>
+                <ul id="categories">
+
+                </ul>
+
+                <h2>Create a list</h2>
+                <form id="create-category">
+                    <input type="text" class="form-control" id="new-category" placeholder="Category">
+                    <button type="submit">Create</button>
+                </form>
+
             </div>
-            <button type="sumbit" class="btn btn-success btn-md">
-              <span class="glyphicon glyphicon-plus"></span> Add to list
-            </button>
-          </form>
-          <h2>Tasks:</h2>
-        <ol id="list">
 
-        </ol>
+            <div class="col-md-6">
+                <h2> <span class="category-name"></span> </h2>
+                <div id="show-task">
+
+                    <h2>Category Name</h2>
+                    <ul id="list">
+                        <p><span class="task"></span></p>
+                    </ul>
+
+                    <form id="new_list_item">
+                        <div class="form-group">
+                            <label for="new-task">Create Task</label>
+                            <input type="text" class="form-control" id="new-task">
+                        </div>
+                        <button type="sumbit" class="btn btn-success btn-md">
+                            <span class="glyphicon glyphicon-plus"></span> Add to list
+                        </button>
+                    </form>
+
+                </div>
+            </div>
         </div>
-
-        <div class="col-md-6">
-          <div id="show-task">
-
-          <h2></h2>
-          <p><span class="task"></span></p>
-
-          </div>
-        </div>
-      </div>
     </div>
   </body>
 </html>

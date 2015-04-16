@@ -12,7 +12,7 @@ $(document).ready(function() {
     "<input type='checkbox'></li>");
 
 
-    $("input#new_list_item").val("");
+    $("input#new-task").val("");
 
 
     $(".task").last().click(function() {
