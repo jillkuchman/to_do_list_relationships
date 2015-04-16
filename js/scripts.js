@@ -1,26 +1,39 @@
 $(document).ready(function() {
-  $("form#new_list_item").submit(function(event) {
+  $("form#create-category").submit(function(event) {
     event.preventDefault();
 
-    var inputtedTask = $("input#new-task").val();
+    var inputtedCategory = $("input#new-category").val();
 
-    var newTask = {
-      task: inputtedTask
-    };
+    var newCategory = { name: inputtedCategory, tasks: [] };
 
-    $("ol#list").append("<li><span class='task'>" + newTask.task + "</span>  " +
-    "<input type='checkbox'></li>");
+    $("ul#categories").append("<li><span class='category'>" + newCategory.name + "</span></li>");
 
+    $("input#new-category").val("");
 
-    $("input#new-task").val("");
-
-
-    $(".task").last().click(function() {
-      $("#show-task").show();
-      $("show-task h2").text(newTask.task);
-
-
-      $(".task").text(newTask.task);
-    });
   });
 });
+
+
+
+
+// var inputtedTask = $("input#new-task").val();
+//
+// var newTask = {
+//   task: inputtedTask
+// };
+//
+// $("ol#list").append("<li><span class='task'>" + newTask.task + "</span>  " +
+// "<input type='checkbox'></li>");
+//
+//
+// $("input#new-task").val("");
+//
+//
+// $(".task").last().click(function() {
+//   $("#show-task").show();
+//   $("show-task h2").text(newTask.task);
+//
+//
+//
+//   $(".task").text(newTask.task);
+// });
