@@ -7,8 +7,8 @@ $(document).ready(function() {
     $("input#new-category").val("");
 
 
-    var newCategory =   {   category_name: inputtedCategory,
-                            tasks: []
+    var newCategory =   { category_name: inputtedCategory,
+                          tasks: []
                         };
 
     newCategory.category_name = inputtedCategory;
@@ -29,8 +29,8 @@ $(document).ready(function() {
           newCategory.tasks.push(inputtedTask);
           $("ul#task-list").append("<li><span class='task'>" + inputtedTask + "</span></li>");
           $("#new-task").val("");
-
         });
+        
         $("#task-list").empty();
 
         newCategory.tasks.forEach(function(task) {

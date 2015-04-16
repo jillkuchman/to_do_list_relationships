@@ -3,6 +3,7 @@
   <head>
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/todolist.png">
     <script src="js/jquery-1.11.2.js"></script>
     <script src="js/scripts.js"></script>
     <title>To-Do</title>
@@ -19,10 +20,15 @@
                 </ul>
 
                 <h2>Create a list</h2>
-                <form id="create-category">
-                    <input type="text" class="form-control" id="new-category" placeholder="Category">
-                    <button type="submit">Create</button>
-                </form>
+                    <form id="create-category">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="new-category" placeholder="Category">
+                        </div>
+                        <button type="submit" class="btn btn-info btn-md">
+                            <span class="glyphicon glyphicon-plus"></span> Create
+                        </button>
+                    </form>
+
             </div>
 
             <div class="col-md-6">
