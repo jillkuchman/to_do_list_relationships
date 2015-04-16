@@ -10,6 +10,13 @@ $(document).ready(function() {
 
     $("input#new-category").val("");
 
+    $("#categories").last().click(function() {
+        $("#show-category").show();
+        $(".category-name").text(newCategory.name);
+
+    });
+
+
   });
 });
 

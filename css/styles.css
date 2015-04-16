@@ -1,12 +1,12 @@
-#show-task {
+#show-category {
   display: none;
 }
 
-.task {
+.category {
   cursor: pointer;
   color: #0088cc;
 }
 
-.task:hover {
+.category:hover {
   text-decoration: underline;
 }
