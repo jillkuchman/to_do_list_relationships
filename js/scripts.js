@@ -4,20 +4,31 @@ $(document).ready(function() {
 
     var inputtedCategory = $("input#new-category").val();
 
-    var newCategory = { name: inputtedCategory, tasks: [] };
+    var newCategory = { category_name: inputtedCategory, tasks: [] };
 
-    $("ul#categories").append("<li><span class='category'>" + newCategory.name + "</span></li>");
+    $("ul#categories").append("<li><span class='category'>" + newCategory.category_name + "</span></li>");
 
     $("input#new-category").val("");
+    alert(newCategory.category_name);
 
-    $("#categories").last().click(function() {
+    $(".category").last().click(function() {
         $("#show-category").show();
-        $(".category-name").text(newCategory.name);
-
+        $(".category-name").text(newCategory.category_name);
+        alert(newCategory.category_name);
     });
+  });
 
+  $("form#create-task").submit(function(event) {
+    event.preventDefault();
+
+    var inputtedTask = $("input#new-task").val();
+
+    newCategory.tasks.push(inputtedTask);
+
+    $("ul#task-list").append("<li>" + inputtedTask + "</li>");
 
   });
+
 });
 
 
